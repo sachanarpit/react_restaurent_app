@@ -5,6 +5,7 @@ import "./style.css";
 let Card = () => {
   const [price, setPrice] = useState("");
   const [rate, setRate] = useState("");
+  const [pay, setPay] = useState("");
   return (
     <div>
       Price Sorting -
@@ -59,6 +60,30 @@ let Card = () => {
       >
         5
       </button>
+      <br />
+      payment filter -:
+      <button
+        onClick={() => {
+          setPay("cash");
+        }}
+      >
+        cash
+      </button>
+      <button
+        onClick={() => {
+          setPay("online");
+        }}
+      >
+        online
+      </button>
+      <button
+        onClick={() => {
+          setPay("");
+        }}
+      >
+        all
+      </button>
+      <br />
       <List data={data} price={price} rate={rate} />
     </div>
   );

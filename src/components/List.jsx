@@ -11,20 +11,28 @@ let List = ({ data, price, rate }) => {
           }
         })
         .map((i) => (
-          <div>
-            <div class="card">
-              <div class="card__image">
+          <div className="grid">
+            <div className="card">
+              <div className="card__image">
                 <img
                   src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                   alt="Salad"
                 />
               </div>
-              <div class="card__info">
-                <div class="car__info--title">
+              <div className="card__info">
+                <div className="car__info--title">
                   <h3>{i.name}</h3>
+
                   <p>rating - {i.rating}</p>
+                  <p className="payement">
+                    {i.payment.cash && i.payment.online
+                      ? "cash/online"
+                      : i.payment.cash
+                      ? "cash"
+                      : "online"}
+                  </p>
                 </div>
-                <div class="card__info--price">
+                <div className="card__info--price">
                   <p>price- {i.price}</p>
                 </div>
               </div>
@@ -39,7 +47,6 @@ let List = ({ data, price, rate }) => {
                   ? "cash"
                   : "online"}
               </div> */}
-            <br />
           </div>
         ))}
     </>

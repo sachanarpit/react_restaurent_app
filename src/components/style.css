@@ -4,6 +4,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.grid {
+  display: -webkit-inline-box;
+}
+
 .card {
   width: 295px;
   overflow: hidden;
