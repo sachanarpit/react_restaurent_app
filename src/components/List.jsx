@@ -1,5 +1,5 @@
 let List = () => {
-  return <div>list is working1</div>;
+  return <div>list is workin</div>;
 };
 
 export default List;
