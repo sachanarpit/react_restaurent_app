@@ -1,7 +1,7 @@
 import { useState } from "react";
 import data from "./db";
 import List from "./List";
-
+import "./style.css";
 let Card = () => {
   const [price, setPrice] = useState("");
   const [rate, setRate] = useState("");
