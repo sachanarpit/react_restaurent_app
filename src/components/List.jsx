@@ -8,6 +8,8 @@ let List = ({ data, price, rate, pay }) => {
             ? x.payment.cash
             : pay === "online"
             ? x.payment.online
+            : pay === "all"
+            ? x.payment.online && x.payment.cash
             : x
         )
 
