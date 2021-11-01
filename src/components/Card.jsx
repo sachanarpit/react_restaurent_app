@@ -1,6 +1,8 @@
 import { useState } from "react";
+import Button from "./Button";
 import data from "./db";
 import List from "./List";
+
 import "./style.css";
 let Card = () => {
   const [price, setPrice] = useState("");
@@ -8,7 +10,7 @@ let Card = () => {
   const [pay, setPay] = useState("");
   return (
     <div>
-      Price Sorting -
+      Price Sorting -{/* <Button x={setPrice} y={"lth"} m={"low to high"} /> */}
       <button
         onClick={() => {
           setPrice("lth");
@@ -60,6 +62,13 @@ let Card = () => {
       >
         5
       </button>
+      <button
+        onClick={() => {
+          setRate("");
+        }}
+      >
+        all
+      </button>
       <br />
       payment filter -:
       <button
@@ -84,7 +93,7 @@ let Card = () => {
         all
       </button>
       <br />
-      <List data={data} price={price} rate={rate} />
+      <List data={data} price={price} rate={rate} pay={pay} />
     </div>
   );
 };

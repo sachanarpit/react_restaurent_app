@@ -1,8 +1,16 @@
-let List = ({ data, price, rate }) => {
+let List = ({ data, price, rate, pay }) => {
   return (
     <>
       {data
         .filter((d) => (rate === "" ? d : d.rating === rate))
+        .filter((x) =>
+          pay === "cash"
+            ? x.payment.cash
+            : pay === "online"
+            ? x.payment.online
+            : x
+        )
+
         .sort((a, b) => {
           if (price === "lth") {
             return a.price - b.price;
